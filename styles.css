@@ -1,1 +1,9 @@
-Deleted old code.
+document.getElementById("orderForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const quantity = document.getElementById("quantity").value;
+    const charge = quantity * 0.05; // Example: 0.05 INR per unit
+    document.getElementById("charge").value = "₹" + charge.toFixed(2);
+
+    alert("Order placed successfully!");
+});
